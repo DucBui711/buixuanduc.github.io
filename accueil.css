@@ -1,0 +1,189 @@
+/* --- HERO SECTION (ACCUEIL) --- */
+
+/* Khung bao ngoài, đảm bảo cao full màn hình và căn giữa dọc */
+.hero-section {
+    min-height: 100vh; /* Chiều cao tối thiểu bằng 100% màn hình */
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center;
+    background-color: #f8f9fa; /* Màu nền xám nhẹ cho nổi bật (tùy chọn) */
+    padding-top: 80px; /* Tránh bị thanh menu che mất phần trên */
+    padding-bottom: 50px;
+    
+}
+
+/* Container chứa 2 cột */
+.hero-container {
+    display: flex;
+    align-items: center; /* Căn giữa 2 cột theo chiều dọc */
+    justify-content: space-between; /* Đẩy 2 cột ra xa nhau */
+    max-width: 1600px;
+    width: 95%; /* Chiếm 90% chiều ngang màn hình */
+    gap: 50px; /* Khoảng cách giữa chữ và ảnh */
+    flex-wrap: wrap;
+}
+
+/* --- Cột bên trái (Text) --- */
+.hero-text {
+    flex: 1; /* Chiếm khoảng 1 nửa không gian */
+}
+
+.greeting {
+    font-size: 2rem;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 4.5rem; /* Tên to và nổi bật */
+    font-weight: 800;
+    color: #222; /* Màu chữ đậm */
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.role {
+    font-size: 2rem;
+    color: var(--primary-color); /* Sử dụng màu chủ đạo của bạn (ví dụ màu xanh) */
+    font-weight: 700;
+    text-transform: uppercase; /* Chữ in hoa */
+    letter-spacing: 1px; /* Giãn khoảng cách chữ một chút */
+}
+
+/* --- Cột bên phải (Avatar) --- */
+.hero-avatar {
+    flex: 1; /* Chiếm khoảng 1 nửa không gian */
+    display: flex;
+    justify-content: center; /* Căn giữa ảnh trong khu vực của nó */
+}
+
+.hero-avatar img {
+    width: 800px; /* Kích thước ảnh cố định trên PC */
+    height: 800px;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo nếu ảnh gốc không vuông */
+    border-radius: 50%; /* Bo tròn ảnh 100% */
+    border: 5px solid var(--primary-color); /* Viền màu xung quanh ảnh */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Đổ bóng cho ảnh nổi lên */
+}
+
+.hero-avatar, .hero-text {
+    flex: 1 1 350px;
+}
+
+.hero-avatar img {
+    width: 550px;
+    height: 550px;
+}
+/* --- RESPONSIVE (Cho điện thoại và máy tính bảng) --- */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column; /* Xếp chồng lên nhau: Chữ trên, Ảnh dưới */
+        text-align: center; /* Căn giữa chữ */
+        gap: 40px;
+    }
+
+    .name {
+        font-size: 3rem; /* Giảm cỡ chữ tên trên điện thoại */
+    }
+
+    .role {
+        font-size: 1.5rem;
+    }
+
+    .hero-avatar img {
+        width: 280px; /* Giảm kích thước ảnh trên điện thoại */
+        height: 280px;
+    }
+}
+
+
+/* Giới thiệu về bts sio */
+/* --- KHUNG BAO NGOÀI (Container) --- */
+.bts-options {
+    display: flex; /* Xếp 2 ô nằm ngang */
+    gap: 30px; /* Khoảng cách giữa 2 ô */
+    margin-top: 30px;
+    flex-wrap: wrap; /* Cho phép xuống dòng nếu màn hình nhỏ */
+}
+
+/* --- TỪNG Ô (Card) --- */
+.bts-card {
+    flex: 1; /* Chia đều không gian (50% - 50%) */
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px; /* Bo góc tròn */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Đổ bóng nhẹ */
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào ô */
+.bts-card:hover {
+    transform: translateY(-5px); /* Nổi lên một chút */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* --- TRANG TRÍ NỘI DUNG --- */
+.bts-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Màu riêng cho SISR (Ví dụ màu Cam/Đỏ) */
+.sisr h3 {
+    color: #e67e22; 
+    border-bottom: 2px solid #e67e22;
+    display: inline-block;
+}
+
+/* Màu riêng cho SLAM (Ví dụ màu Xanh) */
+.slam h3 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+}
+
+/* Căn giữa tiêu đề trong thẻ cha */
+.bts-card {
+    text-align: left; 
+}
+.bts-card h3 {
+    display: table; 
+    margin: 0 auto 20px auto; /* Căn giữa tiêu đề */
+}
+
+.desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 80px; /* Giữ 2 ô cao đều nhau kể cả khi chữ ít/nhiều */
+}
+
+.jobs-title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.jobs-list {
+    list-style-type: disc; /* Dấu chấm đầu dòng */
+    padding-left: 20px;
+    color: #444;
+}
+
+.jobs-list li {
+    margin-bottom: 5px;
+}
+
+/* --- RESPONSIVE (Điện thoại) --- */
+@media (max-width: 768px) {
+    .bts-options {
+        flex-direction: column; /* Xếp chồng lên nhau */
+    }
+}
