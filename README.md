@@ -15,8 +15,8 @@ Ce projet est un site statique construit avec :
 - **JavaScript** (Interactivité, Menu Burger, Filtrage des projets)
 
 ## 📸 Aperçu
-*(Bạn có thể chụp màn hình trang web của bạn, tải lên thư mục assets/img rồi chèn link vào đây)*
-![Aperçu du portfolio](assets/img/screenshot-portfolio.jpg)
+*(Voici mon accueil de Portfolio)*
+![Aperçu du portfolio](assets/image/Acceuil-portfolio.png)
 
 ## 📬 Contact
 - **Email :** bui07112002@gmail.com
