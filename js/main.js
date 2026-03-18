@@ -16,7 +16,7 @@ document.querySelectorAll(".nav-links li a").forEach(n => n.addEventListener("cl
 
 // --- XỬ LÝ NÚT XEM THÊM PROJET ---
 const loadMoreBtn = document.querySelector('#load-more-btn');
-let currentItem = 3; // Số lượng dự án hiện có ban đầu
+let currentItem = 4; // Số lượng dự án hiện có ban đầu
 
 loadMoreBtn.onclick = () => {
     // Lấy tất cả các thẻ project đang có
