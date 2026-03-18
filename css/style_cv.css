@@ -1,0 +1,263 @@
+/* --- SECTION MON CV --- */
+
+/* Container chính chia 2 cột */
+.cv-container {
+    display: flex;
+    /* align-items: flex-start; Căn hàng từ trên xuống */
+    align-items: stretch;
+    gap: 60px; /* Khoảng cách giữa 2 cột */
+    padding: 20px 0;
+    flex-wrap: wrap;
+    max-width: 1600px;
+}
+
+/* --- CỘT TRÁI: GIAO DIỆN PDF VIEWER --- */
+.cv-viewer {
+    flex: 0 0 400px; /* Chiếm 1 phần không gian */
+    max-width: 400px;
+    background-color: #525659; /* Màu nền xám đậm của trình đọc PDF */
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.cv-toolbar {
+    background-color: #323639; /* Màu thanh công cụ tối hơn */
+    color: #f1f1f1;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+.cv-tools i {
+    margin-left: 15px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.cv-image-wrapper {
+    padding: 20px; /* Tạo khoảng hở xung quanh tờ giấy CV */
+    text-align: center;
+}
+
+.cv-img {
+    width: 100%;
+    max-width: 100%; /* Đảm bảo ảnh không tràn khung */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Đổ bóng cho tờ giấy */
+    display: block;
+}
+
+/* --- CỘT PHẢI: NỘI DUNG --- */
+.cv-description {
+    display: flex;           /* Biến nó thành flexbox */
+    flex-direction: column;  /* Xếp nội dung từ trên xuống dưới */
+    justify-content: center; /* Căn giữa theo chiều dọc (trục chính) */
+    flex: 1 1 400px; /* Chiếm 1 phần không gian */
+    padding-top: 10px;
+    max-width: 800px;
+}
+
+.cv-viewer, .cv-description {
+    flex: 1 1 400px;
+    min-width: 300px;
+}
+
+/* Chữ PRÉSENTATION có gạch xanh bên trái */
+.subtitle {
+    display: flex;
+    align-items: center;
+    color: #777;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.subtitle::before {
+    content: "";
+    display: inline-block;
+    width: 25px; /* Độ dài gạch xanh */
+    height: 4px; /* Độ dày gạch xanh */
+    background-color: var(--primary-color); /* Màu xanh chủ đạo */
+    margin-right: 15px;
+}
+
+.cv-header h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 400; /* Font mỏng vừa phải như ảnh mẫu */
+}
+
+.cv-text {
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Nút CV màu xanh */
+.btn-cv {
+    display: inline-block;
+    background-color: #007bff; /* Màu xanh #007bff */
+    color: rgb(255, 255, 255);
+    padding: 12px 35px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #007bff; /* Bo góc nhẹ */
+    border-radius:5%;
+    transition: background 0.3s;
+    margin-bottom: 40px;
+    align-self: flex-start;
+}
+
+.btn-cv:hover {
+    background-color: #fcfcfc;
+    color: #007bff;   
+}
+
+/* Phần Qu'est-ce que le BTS SIO ? */
+/* --- Cập nhật phần dưới cùng của Section CV --- */
+
+.cv-extra.full-width {
+    margin-top: 60px; /* Cách xa phần trên một chút */
+    padding-top: 40px;
+    border-top: 1px solid #e0e0e0; /* Kẻ một đường mờ để phân tách */
+    width: 100%; /* Chiếm toàn bộ chiều ngang */
+    text-align: left; /* Hoặc 'center' nếu bạn muốn căn giữa */
+}
+
+.cv-extra h3 {
+    font-size: 1.8rem; /* Chữ to hơn một chút cho tiêu đề lớn */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cv-extra p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 100%; /* Đảm bảo chữ chạy hết trang */
+}
+
+/* Responsive: Trên điện thoại thì giảm khoảng cách đi chút */
+@media (max-width: 768px) {
+    .cv-extra.full-width {
+        margin-top: 40px;
+        padding-top: 20px;
+    }
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 900px) {
+    .cv-container {
+        flex-direction: column; /* Xếp chồng dọc trên điện thoại */
+    }
+    
+    .cv-viewer, .cv-description {
+        width: 100%;
+    }
+
+    .cv-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* Giới thiệu về bts sio */
+/* --- KHUNG BAO NGOÀI (Container) --- */
+.bts-sio h3 {
+    font-size: 1.8rem; /* Chữ to hơn một chút cho tiêu đề lớn */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.bts-options {
+    display: flex; /* Xếp 2 ô nằm ngang */
+    gap: 30px; /* Khoảng cách giữa 2 ô */
+    margin-top: 30px;
+    flex-wrap: wrap; /* Cho phép xuống dòng nếu màn hình nhỏ */
+}
+
+/* --- TỪNG Ô (Card) --- */
+.bts-card {
+    flex: 1; /* Chia đều không gian (50% - 50%) */
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px; /* Bo góc tròn */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Đổ bóng nhẹ */
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào ô */
+.bts-card:hover {
+    transform: translateY(-5px); /* Nổi lên một chút */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* --- TRANG TRÍ NỘI DUNG --- */
+.bts-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Màu riêng cho SISR (Ví dụ màu Cam/Đỏ) */
+.sisr h3 {
+    color: #e67e22; 
+    border-bottom: 2px solid #e67e22;
+    display: inline-block;
+}
+
+/* Màu riêng cho SLAM (Ví dụ màu Xanh) */
+.slam h3 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+}
+
+/* Căn giữa tiêu đề trong thẻ cha */
+.bts-card {
+    text-align: left; 
+}
+.bts-card h3 {
+    display: table; 
+    margin: 0 auto 20px auto; /* Căn giữa tiêu đề */
+}
+
+.desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 80px; /* Giữ 2 ô cao đều nhau kể cả khi chữ ít/nhiều */
+}
+
+.jobs-title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.jobs-list {
+    list-style-type: disc; /* Dấu chấm đầu dòng */
+    padding-left: 20px;
+    color: #444;
+}
+
+.jobs-list li {
+    margin-bottom: 5px;
+}
+
+/* --- RESPONSIVE (Điện thoại) --- */
+@media (max-width: 768px) {
+    .bts-options {
+        flex-direction: column; /* Xếp chồng lên nhau */
+    }
+}
