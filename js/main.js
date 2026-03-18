@@ -38,7 +38,7 @@ loadMoreBtn.onclick = () => {
         // --- CHỨC NĂNG THU GỌN ---
         
         // Duyệt qua tất cả dự án, bắt đầu từ cái thứ 4 (index 3) trở đi thì ẩn lại
-        for (let i = 3; i < projects.length; i++) {
+        for (let i = 4; i < projects.length; i++) {
             projects[i].classList.add('hidden');
         }
 
