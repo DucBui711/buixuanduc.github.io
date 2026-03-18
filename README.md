@@ -3,7 +3,7 @@
 Bienvenue sur le code source de mon portfolio personnel ! 
 
 ## 🌐 Lien vers le site
-👉 **[Voir mon Portfolio en ligne ici](https://ducbui711.github.io)**
+👉 **[Voir mon Portfolio en ligne ici](https://ducbui711.github.io/buixuanduc.github.io)**
 
 ## 🎯 À propos de ce projet
 Ce site web a été créé pour présenter mon CV, mes compétences et les projets que j'ai réalisés au cours de ma formation **BTS SIO (Services Informatiques aux Organisations)**. 
@@ -19,5 +19,5 @@ Ce projet est un site statique construit avec :
 ![Aperçu du portfolio](assets/img/screenshot-portfolio.jpg)
 
 ## 📬 Contact
-- **Email :** votre.email@gmail.com
-- **LinkedIn :** [Votre Profil LinkedIn](https://linkedin.com/in/votre-profil)
+- **Email :** bui07112002@gmail.com
+- **LinkedIn :** [Votre Profil LinkedIn](https://www.linkedin.com/in/%C4%91%E1%BB%A9c-b%C3%B9i-2b086a36a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
